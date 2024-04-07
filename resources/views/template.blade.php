@@ -1,3 +1,4 @@
+{{-- nice admin --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +29,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
   <!-- =======================================================
@@ -256,7 +259,7 @@
             </li> --}}
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="{{ route('login') }}">
+              <a class="dropdown-item d-flex align-items-center" href="{{ route('landing') }}">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Logout</span>
               </a>

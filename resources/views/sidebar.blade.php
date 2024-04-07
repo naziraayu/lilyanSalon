@@ -1,10 +1,11 @@
+{{-- sidebar admin --}}
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="{{ url('dashboard') }}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a> 
@@ -190,7 +191,7 @@
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="{{ url('book') }}"">
           <i class="bi bi-inboxes"></i>
           <span>Booking</span>
         </a>
@@ -211,7 +212,7 @@
       </li><!-- End Register Page Nav --> --}}
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ url('login') }}">
+        <a class="nav-link collapsed" href="{{ route('landing') }}">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Logout</span>
         </a>

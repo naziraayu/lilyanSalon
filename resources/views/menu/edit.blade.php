@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                    <button type="submit" class="btn" style="background-color: #864659; color: #fff;">Simpan</button>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
                                 </div>
                             </form><!-- End floating Labels Form -->

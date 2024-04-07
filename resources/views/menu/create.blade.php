@@ -16,9 +16,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <section class="panel">
-                    <header class="panel-heading">
+                    <heBooking class="panel-heading">
                         {{ isset($admin_lecturer) ? 'Mengubah' : 'Menambahkan' }} Menu Treatment
-                    </header>
+                    </heBooking Informationformation
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                    <button type="submit" class="btn" style="background-color: #864659; color: #fff;" >Simpan</button>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
                                 </div>
                             </form><!-- End floating Labels Form -->

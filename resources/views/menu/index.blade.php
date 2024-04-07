@@ -26,8 +26,9 @@
                                 <p>{{ $message }}</p>
                             </div>
                         @endif
-                        <a href="{{ route('tambah_data_menu') }}"><button class="btn btn-primary"
-                                type="button"><i class="bi bi-plus"> Tambah</i></button></a>
+                        <a href="{{ route('tambah_data_menu') }}">
+                            <button class="btn" type="button" style="background-color:#B9798C; color: #fff; "><i class="bi bi-plus"> Tambah</i></button>
+                        </a>
                     </div>
                 </section>
             </div>
