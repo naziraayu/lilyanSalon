@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Lilyan Salon</title>
+  <title>Lily Ann Salon</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,7 +50,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="{{ url('admin') }}" class="logo d-flex align-items-center">
         <img src="img/lily_ann__3_-removebg-preview.png" alt="">
-        <span class="d-none d-lg-block">Lilyan Salon</span>
+        <span class="d-none d-lg-block">Lily Ann Salon</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->

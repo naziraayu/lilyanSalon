@@ -8,6 +8,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -69,3 +70,6 @@ Route::get('dashboard', function() {
 
 Route::get('/book', [BookingController::class, 'index'])->name('booking');
 // Route::post('/tambah_data_menu', [MenuController::class,'store'])->name('tambah_data_menu');
+
+//route ke data customer
+Route::get('/customer', [CustomerController::class, 'index'])->name('customer');
