@@ -10,24 +10,36 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
-    public function login(Request $request) {
-        $this->validate($request, [
-            'username' => 'required|string',
-            'password' => 'required|string|min:6',
-        ]);
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
 
-        $loginType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'password';
-
-        $login = [
-            $loginType => $request->username,
-            'password' => $request->password,
-        ];
-
-        if (auth()->attempt($login)) {
-            return redirect()->route('template');
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->route('dashboard'); // Ganti 'admin.dashboard' dengan nama rute halaman admin Anda
         }
-        return redirect()->route('login')->with(['error' => 'Email/Password salah.']);
+
+        // Jika autentikasi gagal, kembalikan ke halaman login dengan pesan error
+        return redirect()->route('login')->with(['error' => 'Email atau password salah.']);
     }
+    // public function login(Request $request) {
+    //     $this->validate($request, [
+    //         'username' => 'required|string',
+    //         'password' => 'required|string|min:6',
+    //     ]);
+
+    //     $loginType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'password';
+
+    //     $login = [
+    //         $loginType => $request->username,
+    //         'password' => $request->password,
+    //     ];
+
+    //     if (auth()->attempt($login)) {
+    //         return redirect()->route('template');
+    //     }
+    //     return redirect()->route('login')->with(['error' => 'Email/Password salah.']);
+    // }
 
     // public function authenticate(Request $request): RedirectResponse
     // {
@@ -39,7 +51,7 @@ class LoginController extends Controller
     //     if (Auth::attempt($credentials)) {
     //         $request->session()->regenerate();
  
-    //         return redirect()->intended('admin');
+    //         return redirect()->intended('template');
     //     }
  
     //     return back()->withErrors([

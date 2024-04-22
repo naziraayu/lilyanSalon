@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('booking', function (Blueprint $table) {
+        Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal');
-            $table->time('jam');
-            $table->foreignId('no_telepon_id')->unique();
+            $table->bigInteger('grand_total');
+            $table->bigInteger('kembalian');
+            $table->foreignId('id_menu')->unique();
+            $table->foreignId('id_booking')->unique();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('booking');
+        Schema::dropIfExists('transaksi');
     }
 };
