@@ -178,8 +178,7 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Hair Treatment</h3>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            Rambut yang sehat dan indah adalah aset berharga bagi penampilan Anda. Di LILY ANN Salon, kami menawarkan berbagai jenis perawatan rambut yang dirancang khusus untuk memenuhi kebutuhan Anda.
             </p>
             {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}
           </div>
@@ -197,11 +196,12 @@
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Beauty Treatment</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <p>Di LILY ANN Salon, kami menawarkan berbagai perawatan kecantikan untuk merawat kulit dan tubuh Anda. Mulai dari facial yang menyegarkan hingga lash lift yang rapi, kami menggunakan produk berkualitas tinggi dan teknik terbaik untuk memberikan hasil terbaik bagi Anda.</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Facial Sari Ayu.</span></li>
+              <li><i class="bi bi-check"></i><span>Facial Viva.</span></li>
+              <li><i class="bi bi-check"></i><span>Massage Wajah.</span></li>
+              <li><i class="bi bi-check"></i> <span>Lash lift</span>.</li>
             </ul>
             {{-- <a href="#" class="btn btn-get-started align-self-start">Get Started</a> --}}
           </div>
@@ -211,8 +211,8 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Hair Spa/Mask</h3>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            Di LILY ANN Salon, kami menawarkan layanan hair spa dan hair mask yang akan memberikan nutrisi dan kelembutan ekstra pada rambut Anda. 
+            Kami menggunakan produk berkualitas tinggi dan teknik perawatan terbaik untuk memastikan rambut Anda tetap sehat dan indah.
             </p>
             {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}
           </div>
