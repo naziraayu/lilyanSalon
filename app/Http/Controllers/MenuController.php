@@ -11,6 +11,9 @@ class MenuController extends Controller
     public function index(){
         return view('menu.index',['data' => Menu::all()]);
     }
+    public function cetakMenu(){
+        return view('menu.cetak',['data' => Menu::all()]);
+    }
     public function create(){
         $menu = null;
         return view('menu.create',compact('menu'));

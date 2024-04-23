@@ -26,10 +26,19 @@
                                 <p>{{ $message }}</p>
                             </div>
                         @endif
-                        <a href="{{ route('tambah_data_menu') }}">
-                            <button class="btn" type="button" style="background-color:#B9798C; color: #fff; "><i class="bi bi-plus"> Tambah</i></button>
-                        </a>
-                    </div>
+                        <div style="display: inline-block;">
+        <a href="{{ route('tambah_data_menu') }}">
+            <button class="btn" type="button" style="background-color:#B9798C; color: #fff; "><i class="bi bi-plus"> Tambah</i></button>
+        </a>
+    </div>
+    <div style="display: inline-block;">
+        <form action="{{ route('cetak_menu') }}" method="GET" target="_blank">
+            <button type="submit" class="btn" style="background-color:#B9798C; color: #fff;">
+                <i class="bi bi-printer"></i> Cetak
+            </button>
+        </form>
+    </div>
+</div>
                 </section>
             </div>
         </div>

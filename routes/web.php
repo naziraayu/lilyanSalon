@@ -57,6 +57,7 @@ Route::get('/edit_data_menu/{id}', [MenuController::class,'edit'])->name('edit_d
 Route::post('/update_data_menu/{id}', [MenuController::class,'update']);
 Route::post('/hapus_data_menu/{id}', [MenuController::class,'destroy'])->name('hapus_data_menu');
 // Route::get('/admin',[MenuController::class,'index'])->name('admin');
+Route::get('/cetak', [MenuController::class, 'cetakMenu'])->name('cetak_menu');
 
 //route pricelist
 Route::get('price', function() {
@@ -64,9 +65,7 @@ Route::get('price', function() {
 });
 
 //route ke dashboard admin
-Route::get('dashboard', function() {
-    return view('dashboard');
-});
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/book', [BookingController::class, 'index'])->name('booking');
 // Route::post('/tambah_data_menu', [MenuController::class,'store'])->name('tambah_data_menu');
