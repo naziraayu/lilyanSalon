@@ -178,7 +178,7 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Hair Treatment</h3>
             <p>
-            Rambut yang sehat dan indah adalah aset berharga bagi penampilan Anda. Di LILY ANN Salon, kami menawarkan berbagai jenis perawatan rambut yang dirancang khusus untuk memenuhi kebutuhan Anda.
+            Rambut yang sehat dan indah adalah aset berharga bagi penampilan Anda. Di Lilyan Salon, kami menawarkan berbagai jenis perawatan rambut yang dirancang khusus untuk memenuhi kebutuhan Anda.
             </p>
             {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}
           </div>
@@ -196,7 +196,7 @@
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Beauty Treatment</h3>
-            <p>Di LILY ANN Salon, kami menawarkan berbagai perawatan kecantikan untuk merawat kulit dan tubuh Anda. Mulai dari facial yang menyegarkan hingga lash lift yang rapi, kami menggunakan produk berkualitas tinggi dan teknik terbaik untuk memberikan hasil terbaik bagi Anda.</p>
+            <p>Di Lilyan Salon, kami menawarkan berbagai perawatan kecantikan untuk merawat kulit dan tubuh Anda. Mulai dari facial yang menyegarkan hingga lash lift yang rapi, kami menggunakan produk berkualitas tinggi dan teknik terbaik untuk memberikan hasil terbaik bagi Anda.</p>
             <ul>
               <li><i class="bi bi-check"></i> <span>Facial Sari Ayu.</span></li>
               <li><i class="bi bi-check"></i><span>Facial Viva.</span></li>
@@ -211,7 +211,7 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Hair Spa/Mask</h3>
             <p>
-            Di LILY ANN Salon, kami menawarkan layanan hair spa dan hair mask yang akan memberikan nutrisi dan kelembutan ekstra pada rambut Anda. 
+            Di Lilyan Salon, kami menawarkan layanan hair spa dan hair mask yang akan memberikan nutrisi dan kelembutan ekstra pada rambut Anda. 
             Kami menggunakan produk berkualitas tinggi dan teknik perawatan terbaik untuk memastikan rambut Anda tetap sehat dan indah.
             </p>
             {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}
@@ -721,8 +721,9 @@
           <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
             <h3>Testimonials</h3>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            Kami bangga dengan testimoni positif dari pelanggan setia kami di Lilyan Salon, yang merasakan langsung kualitas layanan kami. 
+            Testimoni ini menjadi bukti komitmen kami untuk memberikan pengalaman terbaik bagi setiap pelanggan, dan tentunya memberikan dorongan positif bagi kami untuk terus meningkatkan layanan kami.
+
             </p>
           </div>
 
@@ -749,10 +750,10 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src= "img/fototesti1.jpg" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo & Founder</h4>
+                        <h3>Tira</h3>
+                        <!-- <h4>Ceo & Founder</h4> -->
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -760,7 +761,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                      <span>Saya sudah mencoba berbagai salon kecantikan sebelumnya, tetapi Lilyan Salon benar-benar berbeda. Mereka tidak hanya memberikan perawatan terbaik, tetapi juga menciptakan suasana yang nyaman dan santai.</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -769,10 +770,9 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="img/fototesti2.jpg" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
+                        <h3>Ghea</h3>
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -780,7 +780,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                      <span>Saya pertama kali mengunjungi Lilyan Salon atas rekomendasi teman, dan saya tidak menyesalinya sama sekali. Layanan yang saya terima jauh melebihi ekspektasi saya. Mereka sangat teliti dalam melakukan perawatan dan hasilnya benar-benar luar biasa. Saya pasti akan kembali lagi!".</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -789,10 +789,10 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="img/fototesti3.jpg"class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
+                        <h3>Emilia</h3>
+                        <!-- <h4>Store Owner</h4> -->
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -800,7 +800,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                      <span>Lash lift di Lilyan Salon benar-benar membuat saya terkesan. Hasilnya sangat memuaskan dan tahan lama.</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -809,10 +809,10 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="img/fototesti4.jpg" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
+                        <h3>Delia</h3>
+                        <!-- <h4>Freelancer</h4> -->
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -820,7 +820,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                      <span>Saya selalu menikmati hair spa di Lilyan Salon. Selain rambut menjadi lebih sehat, saya juga merasa sangat rileks selama treatment. Sangat direkomendasikan untuk yang ingin merawat rambut dan relaksasi sekaligus.</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -829,10 +829,10 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="img/fototesti5.jpg" class="testimonial-img flex-shrink-0" alt="">
                       <div>
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
+                        <h3>Nova</h3>
+                        <!-- <h4>Entrepreneur</h4> -->
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
@@ -840,7 +840,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                      <span>Pijatan saat creambath di Lilyan Salon sungguh luar biasa! Saya merasa sangat rileks dan nyaman. Selain itu, hasilnya juga memuaskan. Rambut saya yang awalnya rusak sekarang terasa lebih lembut, sehat, dan wangi. Terima kasih Lilyan Salon!</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
