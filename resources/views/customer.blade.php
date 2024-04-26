@@ -1,20 +1,20 @@
-@extends ('template')
+@extends('template')
 
 @section('content')
 <section id="main-content">
     <section class="wrapper">
         <div class="row">
             <div class="col-lg 12">
-                <h3 class="page-header"><i class="icon_document_alt"></i>Master</h3>
+                <h3 class="page-header"><i class="icon_document_alt"></i>Data Customer</h3>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="bi bi-house-door"></i></a></li>
-                    <li class="breadcrumb-item active">Menu Treatment</li>
+                    <li class="breadcrumb-item active">Data Customer</li>
                     {{-- <li class="breadcrumb-item active">Default</li> --}}
                 </ol>
             </div>
         </div>
         {{-- form validation --}}
-        <div class="row"> 
+        {{-- <div class="row"> 
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
@@ -26,22 +26,13 @@
                                 <p>{{ $message }}</p>
                             </div>
                         @endif
-                        <div style="display: inline-block;">
-        <a href="{{ route('tambah_data_menu') }}">
-            <button class="btn" type="button" style="background-color:#B9798C; color: #fff; "><i class="bi bi-plus"> Tambah</i></button>
-        </a>
-    </div>
-    <div style="display: inline-block;">
-        <form action="{{ route('cetak_menu') }}" method="GET" target="_blank">
-            <button type="submit" class="btn" style="background-color:#B9798C; color: #fff;">
-                <i class="bi bi-printer"></i> Cetak
-            </button>
-        </form>
-    </div>
-</div>
+                        <a href="{{ route('tambah_data_menu') }}">
+                            <button class="btn" type="button" style="background-color:#B9798C; color: #fff; "><i class="bi bi-plus"> Tambah</i></button>
+                        </a>
+                    </div>
                 </section>
             </div>
-        </div>
+        </div> --}}
         {{-- <div class="card">
             <div class="card-body">
                 <form class="row g-3">
@@ -79,34 +70,36 @@
         </div>   --}}
     </section>
 </section>  
-<br>
 <table class="table table-hover" style="border-radius: 50px">
     <thead>
         <tr>
             <th scope="col">No</th>
-            <th scope="col">Nama Treatment</th>
-            <th scope="col">Harga</th>
-            <th scope="col">Deskripsi</th>
-            <th scope="col">Action</th>
+            <th scope="col">Nama Customer</th>
+            <th scope="col">No Telp</th>
+            <th scope="col">Password</th>
+            <th scope="col">Pertanyaan Keamanan</th>
+            <th scope="col">Jawaban</th>
         </tr>
     </thead>
     <tbody>
         <?php $no = 1; ?>
-        @foreach ($data as $item)
+        @foreach ($customer as $customers)
             <tr>
                 <th scope="row">{{ $no }}</th> 
-                <td>{{ $item->nama_treatment }}</td>
-                <td>{{ $item->harga }}</td>
-                <td>{{ $item->deskripsi}}</td>
-                <td>
+                <td>{{ $customers->nama_lengkap }}</td>
+                <td>{{ $customers->no_telp }}</td>
+                <td>{{ $customers->password}}</td>
+                <td>{{ $customers->pertanyaan_keamanan}}</td>
+                <td>{{ $customers->jawaban}}</td>
+                {{-- <td>
                     <div class="btn-group">
-                        <form action="/hapus_data_menu/{{ $item['id'] }}" method="POST">
+                        <form action="/hapus_data_cust/{{ $customers['id'] }}" method="POST">
                             @csrf
-                            <a href="/edit_data_menu/{{ $item['id'] }}" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+                            <a href="/edit_data_menu/{{ $customers['id'] }}" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
                             <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"><i class="bi bi-trash"></i></button>
                         </form>
                     </div>
-                </td>
+                </td> --}}
             </tr>
             <?php 
             $no++;
@@ -115,4 +108,3 @@
     </tbody>
 </table>
 @endsection
-

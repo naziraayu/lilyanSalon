@@ -12,7 +12,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10">
-            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Lilyan Salon</h2>
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Lily Ann Salon</h2>
             <p data-aos="fade-up" data-aos-delay="200">Home Service Treatment Facial anda Haircut</p>
             {{-- <h6 data-aos="fade-up" data-aos-delay="300">Sience 2022</h6> --}}
           </div>
@@ -178,7 +178,7 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Hair Treatment</h3>
             <p>
-            Rambut yang sehat dan indah adalah aset berharga bagi penampilan Anda. Di Lilyan Salon, kami menawarkan berbagai jenis perawatan rambut yang dirancang khusus untuk memenuhi kebutuhan Anda.
+            Rambut yang sehat dan indah adalah aset berharga bagi penampilan Anda. Di LILY ANN Salon, kami menawarkan berbagai jenis perawatan rambut yang dirancang khusus untuk memenuhi kebutuhan Anda.
             </p>
             {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}
           </div>
@@ -196,7 +196,7 @@
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Beauty Treatment</h3>
-            <p>Di Lilyan Salon, kami menawarkan berbagai perawatan kecantikan untuk merawat kulit dan tubuh Anda. Mulai dari facial yang menyegarkan hingga lash lift yang rapi, kami menggunakan produk berkualitas tinggi dan teknik terbaik untuk memberikan hasil terbaik bagi Anda.</p>
+            <p>Di LILY ANN Salon, kami menawarkan berbagai perawatan kecantikan untuk merawat kulit dan tubuh Anda. Mulai dari facial yang menyegarkan hingga lash lift yang rapi, kami menggunakan produk berkualitas tinggi dan teknik terbaik untuk memberikan hasil terbaik bagi Anda.</p>
             <ul>
               <li><i class="bi bi-check"></i> <span>Facial Sari Ayu.</span></li>
               <li><i class="bi bi-check"></i><span>Facial Viva.</span></li>
@@ -211,7 +211,7 @@
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
             <h3>Hair Spa/Mask</h3>
             <p>
-            Di Lilyan Salon, kami menawarkan layanan hair spa dan hair mask yang akan memberikan nutrisi dan kelembutan ekstra pada rambut Anda. 
+            Di LILY ANN Salon, kami menawarkan layanan hair spa dan hair mask yang akan memberikan nutrisi dan kelembutan ekstra pada rambut Anda. 
             Kami menggunakan produk berkualitas tinggi dan teknik perawatan terbaik untuk memastikan rambut Anda tetap sehat dan indah.
             </p>
             {{-- <a href="#" class="btn btn-get-started">Get Started</a> --}}

@@ -6,7 +6,7 @@
       <a href="{{ url('dashboard') }}" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         {{-- <img src="img/lily ann.png" alt=""> --}}
-        <h1>Lilyan Salon</h1>
+        <h1>Lily Ann Salon</h1>
         <span>.</span>
       </a>
 
