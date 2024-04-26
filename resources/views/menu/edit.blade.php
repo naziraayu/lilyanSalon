@@ -7,7 +7,7 @@
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="icon_document_alt"></i> Menu Treatment</h3>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="bi bi-house-door"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ url('data_menu') }}">Menu Treatment</a></li>
                     <li class="breadcrumb-item active">Edit Menu Treatment</li>
                 </ol>
@@ -30,7 +30,7 @@
                             </ul>
                         </div>
                     @endif
-                    <br>
+                    <br><br><br>
                     @foreach ($data as $item)
                     <div class="card">
                         <br>
@@ -56,8 +56,8 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn" style="background-color: #864659; color: #fff;">Simpan</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
+                                    <button type="submit" class="btn" style="background-color: #864659; color: #fff; margin-left:700px;">Simpan</button>
                                 </div>
                             </form><!-- End floating Labels Form -->
                     

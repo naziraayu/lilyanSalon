@@ -6,10 +6,12 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\LandingController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,8 @@ use App\Http\Controllers\DashboardController;
 // });
 
 Auth::routes();
+
+// Route::get('/login',[LoginController::class, 'index'])->name('login');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -57,7 +61,7 @@ Route::get('/edit_data_menu/{id}', [MenuController::class,'edit'])->name('edit_d
 Route::post('/update_data_menu/{id}', [MenuController::class,'update']);
 Route::post('/hapus_data_menu/{id}', [MenuController::class,'destroy'])->name('hapus_data_menu');
 // Route::get('/admin',[MenuController::class,'index'])->name('admin');
-
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 //route pricelist
 Route::get('price', function() {
     return view('price');
@@ -73,3 +77,7 @@ Route::get('/book', [BookingController::class, 'index'])->name('booking');
 
 //route ke data customer
 Route::get('/customer', [CustomerController::class, 'index'])->name('customer');
+Route::get('/edit_data_menu/{id}', [CustomerController::class,'edit'])->name('edit_data_menu');
+
+//route ke transaksi
+Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');

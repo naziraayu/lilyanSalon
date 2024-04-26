@@ -5,7 +5,7 @@
     <h5 class="card-title">Dashboard</h5>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i></a></li>
+            <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="bi bi-house-door"></i></a></li>
             {{-- <li class="breadcrumb-item"><a href="#">Library</a></li> --}}
             <li class="breadcrumb-item active">Dashboard</li>
         </ol>

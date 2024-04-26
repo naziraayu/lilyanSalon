@@ -12,11 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('booking', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_booking');
             $table->date('tanggal');
             $table->time('jam');
-            $table->foreignId('no_telepon_id')->unique();
+            $table->unsignedBigInteger('id_menu');
+            $table->unsignedBigInteger('id_customer');
             $table->timestamps();
+            $table->foreign('id_menu')->references('id_menu')->on('menu')->onUpdate('cascade');
+            $table->foreign('id_customer')->references('id_customer')->on('customer')->onUpdate('cascade');
+            // $table->index('id_telp');
         });
     }
 

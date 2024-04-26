@@ -184,7 +184,7 @@
       {{-- <li class="nav-heading">Pages</li> --}}
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
+        <a class="nav-link collapsed" href="{{ url('customer') }}">
           <i class="bi bi-person"></i>
           <span>Data Customer</span>
         </a>
@@ -198,7 +198,7 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link collapsed" href="{{ url('transaksi') }}">
           <i class="bi bi-cash"></i>
           <span>Transaksi</span>
         </a>
@@ -212,9 +212,9 @@
       </li><!-- End Register Page Nav --> --}}
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('landing') }}">
+        <a class="nav-link collapsed" href="{{ route('logout') }}">
           <i class="bi bi-box-arrow-in-right"></i>
-          <span>Logout</span>
+          <span>Logout</span> 
         </a>
       </li><!-- End Login Page Nav -->
 

@@ -29,19 +29,19 @@
                             </ul>
                         </div>
                     @endif
-                    <br>
+                    <br><br><br>
                     <div class="card">
                         <br>
                         <div class="card-body">
                             <form class="row g-3" id="data_menu_form" method="POST" action="{{ route('tambah_data_menu') }}">
                                 {!! csrf_field() !!}
-                                <div class="col-md-12">
+                                <div class="col-12">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="nama_treatment" placeholder="Nama Treatment" name="nama_treatment">
                                         <label for="cname">Nama Treatment</label>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-12">
                                     <div class="form-floating">
                                         <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga">
                                         <label for="price">Harga</label>
@@ -54,8 +54,8 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn" style="background-color: #864659; color: #fff;" >Simpan</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
+                                    <button type="submit" class="btn" style="background-color: #864659; color: #fff; margin-left:700px;" >Simpan</button>
                                 </div>
                             </form><!-- End floating Labels Form -->
                     
@@ -64,6 +64,7 @@
                 </section>
             </div>
         </div>
+        {{-- end from validation --}}
     </section>
 </section>
 @endsection

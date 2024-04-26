@@ -33,12 +33,12 @@ class MenuController extends Controller
         return redirect()->route('data_menu')->with('success','Menu Treatment berhasil ditambahkan.');
     }
     public function destroy($id){
-        DB::table('menu')->where('id', $id)->delete();
+        DB::table('menu')->where('id_menu', $id)->delete();
         return redirect()->route('data_menu')->with('success' ,"Menu Treatment berhasil di hapus");
     }
     public function edit($id){ 
         // $data = DB::table('pengalaman_kerja')->where('id',$id)->first();
-        return view('menu.edit', ['data'=> Menu::where('id', $id)->get()]);
+        return view('menu.edit', ['data'=> Menu::where('id_menu', $id)->get()]);
     }
     public function update($id, Request $request){
     // Validasi input sebelum menyimpan ke database
@@ -53,7 +53,7 @@ class MenuController extends Controller
     ]);
 
     // Simpan data jika validasi berhail
-    DB::table('menu')->where('id', $id)->update([
+    DB::table('menu')->where('id_menu', $id)->update([
         'nama_treatment' => $request->nama_treatment,
         'harga' => $request->harga,
         'deskripsi' => $request->deskripsi,
