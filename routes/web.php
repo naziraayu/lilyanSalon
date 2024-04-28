@@ -79,4 +79,9 @@ Route::get('/customer', [CustomerController::class, 'index'])->name('customer');
 Route::get('/edit_data_menu/{id}', [CustomerController::class,'edit'])->name('edit_data_menu');
 
 //route ke transaksi
-Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+Route::get('transaksi/{id_booking}', 'TransaksiController@show')->name('transaksi_show');
+
+
+
+

@@ -53,7 +53,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span>Lily Ann Salon</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Home Service Treatment Facial anda Haircut</p>
           <div class="social-links d-flex mt-4">
             {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
             {{-- <a href=""><i class="bi bi-facebook"></i></a> --}}
@@ -87,10 +87,10 @@
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p>Jalan Cempaka</p>
+          <p>Jember, Jawa Timur</p>
+          <!-- <p>United States</p> -->
+          <p class="mt-4"><strong>Phone:</strong> <span>085856911630</span></p>
           <p><strong>Email:</strong> <span>info@example.com</span></p>
         </div>
 
