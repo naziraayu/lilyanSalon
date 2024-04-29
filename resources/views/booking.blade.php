@@ -35,7 +35,8 @@
                     <div class="btn-group">
                         <form action="/hapus_data_book/{{ $customers['id'] }}" method="POST">
                             @csrf
-                            <a href="/book_transaksi/{{ $customers['id'] }}" class="btn btn-warning"><i class="bi bi-cash"></i></a>
+                            <a href="{{ route('transaksi', ['id_booking' => $customers->id_booking]) }}" class="btn btn-warning"><i class="bi bi-cash"></i></a>
+
                             <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"><i class="bi bi-trash"></i></button>
                         </form>
                     </div>
@@ -48,4 +49,4 @@
     </tbody>
 </table>
 @endsection
-
+ 
