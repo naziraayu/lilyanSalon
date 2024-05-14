@@ -19,6 +19,7 @@
     <thead>
         <tr>
             <th scope="col">No</th>
+            <th scope="col">Nama Customer</th>
             <th scope="col">Tanggal</th>
             <th scope="col">Jam</th>
             <th scope="col">Action</th>
@@ -26,18 +27,24 @@
     </thead>
     <tbody>
         <?php $no = 1; ?>
-        @foreach ($customer as $customers)
+        @foreach ($data as $item)
             <tr>
                 <th scope="row">{{ $no }}</th> 
-                <td>{{ $customers->tanggal }}</td>
-                <td>{{ $customers->jam }}</td>
+                {{-- @foreach ($data2 as $item2) --}}
+                <td>{{ $item->nama_lengkap }}</td>
+                {{-- @endforeach --}}
+                <td>{{ $item->tanggal }}</td>
+                <td>{{ $item->jam }}</td>
                 <td>
                     <div class="btn-group">
-                        <form action="/hapus_data_book/{{ $customers['id'] }}" method="POST">
+                        <form action="/hapus_data_book/{{ $item['id'] }}" method="POST">
                             @csrf
-                            <a href="{{ route('transaksi', ['id_booking' => $customers->id_booking]) }}" class="btn btn-warning"><i class="bi bi-cash"></i></a>
-
-                            <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"><i class="bi bi-trash"></i></button>
+                            <a href="{{ route('transaksi', $item->id) }}" class="btn btn-success">
+                                <i class="bi bi-cash"></i>
+                            </a>
+                            <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
+                                <i class="bi bi-trash"></i>
+                            </button>
                         </form>
                     </div>
                 </td>

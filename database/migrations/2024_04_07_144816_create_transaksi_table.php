@@ -12,14 +12,26 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('transaksi', function (Blueprint $table) {
-            $table->bigIncrements('id_transaksi');
-            $table->bigInteger('grand_total');
-            $table->bigInteger('kembalian');
-            $table->unsignedBigInteger('id_menu');
-            $table->unsignedBigInteger('id_booking');
+            $table->string('id_transaksi')->primary()->unique();
+            $table->decimal('grand_total')->nullable();
+            $table->decimal('kembalian')->nullable();
+            $table->decimal('bayar')->nullable();
+            $table->unsignedBigInteger('booking_id');
+            $table->foreign('booking_id')
+            ->references('id')
+            ->on('booking')
+            ->onDelete('cascade');
+            $table->unsignedBigInteger('menu_id');
+            $table->foreign('menu_id')
+            ->references('id')
+            ->on('menu')
+            ->onDelete('cascade');
+            $table->unsignedBigInteger('customer_id');
+            $table->foreign('customer_id')
+            ->references('id')
+            ->on('customer')
+            ->onDelete('cascade');
             $table->timestamps();
-            $table->foreign('id_menu')->references('id_menu')->on('menu')->onUpdate('cascade');
-            $table->foreign('id_booking')->references('id_booking')->on('booking')->onUpdate('cascade');
         });
     }
 

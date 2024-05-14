@@ -15,9 +15,9 @@ class BookingSeeder extends Seeder
     {
         DB::table('booking')->insert([
             'tanggal' => '2024-09-01',
-            'jam' => '11.00',
-            'id_menu' => '1',
-            'id_customer' => '1',
+            'jam' => '12.00',
+            'customer_id' => '1',
+            'menu_id' => '1',
         ]);
     }
 }

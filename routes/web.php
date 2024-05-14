@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\RiwayatTransaksiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TransaksiController;
@@ -71,17 +73,24 @@ Route::get('price', function() {
 //route ke dashboard admin
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/book', [BookingController::class, 'index'])->name('booking');
+// Route::get('/book', [BookingController::class, 'index'])->name('booking');
+Route::get('/booking', [BookingController::class, 'index'])->name('booking');;
 // Route::post('/tambah_data_menu', [MenuController::class,'store'])->name('tambah_data_menu');
 
 //route ke data customer
 Route::get('/customer', [CustomerController::class, 'index'])->name('customer');
-Route::get('/edit_data_menu/{id}', [CustomerController::class,'edit'])->name('edit_data_menu');
 
 //route ke transaksi
-Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
-Route::get('transaksi/{id_booking}', 'TransaksiController@show')->name('transaksi_show');
+Route::get('/transaksi/{id}', [TransaksiController::class, 'index'])->name('transaksi');
+Route::get('/get_harga', [TransaksiController::class, 'getHarga']);
+// Route::post('/bayar_transaksi', [TransaksiController::class, 'bayar'])->name('bayarTransaksi');
+Route::get('/riwayat_transaksi', [RiwayatTransaksiController::class, 'index'])->name('riwayat_transaksi');
+Route::get('/coba', [TransaksiController::class, 'coba']);
 
+// Route untuk menangani aksi bayarTransaksi
+Route::post('/bayar_transaksi', [TransaksiController::class, 'bayarTransaksi'])->name('bayarTransaksi');
 
-
-
+// Route untuk halaman riwayatTransaksi
+Route::get('/riwayat_transaksi', [TransaksiController::class, 'riwayatTransaksi'])->name('riwayatTransaksi');
+// Route::get('/transaksi/{id}', [TransaksiController::class, 'show'])->name('transaksi.show');
+// Route::get('/riwayat_transaksi_detail', [TransaksiController::class, 'show'])->name('showDetail');

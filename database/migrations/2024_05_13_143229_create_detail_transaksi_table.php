@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Customer;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,22 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('booking', function (Blueprint $table) {
-            $table->id();
-            $table->date('tanggal');
-            $table->time('jam');
-            $table->unsignedBigInteger('customer_id');
+        Schema::create('detail_transaksi', function (Blueprint $table) {
+            $table->string('transaksi_id');
             $table->unsignedBigInteger('menu_id');
+            $table->string('nama_treatment')->nullable();
+            $table->decimal('harga', 10, 2);
+            $table->foreign('transaksi_id')
+            ->references('id_transaksi')
+            ->on('transaksi')
+            ->onDelete('cascade');
             $table->foreign('menu_id')
             ->references('id')
             ->on('menu')
             ->onDelete('cascade');
-            $table->timestamps();
-            $table->foreign('customer_id')
-            ->references('id')
-            ->on('customer')
-            ->onDelete('cascade');
         });
+
     }
 
     /**
@@ -35,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('booking');
+        Schema::dropIfExists('detail_transaksi');
     }
 };

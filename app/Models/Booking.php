@@ -8,11 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Booking extends Model
 {
     protected $table = 'booking';
-    protected $primaryKey = 'id_booking';
-    protected $guarded = ['id_booking'];
+    protected $primaryKey = 'id';
+    protected $guarded = ['id'];
 
-    // public function customer()
-    // {
-    //     return $this->belongsTo(Customer::class);
-    // }
+    public function customer(){
+    	return $this->hasOne(Customer::class);
+    }
+    public function menu()
+{
+    return $this->belongsTo(Menu::class, 'menu_id');
+}
 }
