@@ -82,28 +82,15 @@
         </tr>
     </thead>
     <tbody>
-        <?php $no = 1; ?>
         @foreach ($customer as $customers)
             <tr>
-                <th scope="row">{{ $no }}</th> 
+                <td>{{ $loop->iteration }}</td> <!-- Gunakan $loop->iteration untuk menghasilkan nomor urut secara otomatis -->
                 <td>{{ $customers->nama_lengkap }}</td>
                 <td>{{ $customers->no_telp }}</td>
-                <td>{{ $customers->password}}</td>
-                <td>{{ $customers->pertanyaan_keamanan}}</td>
-                <td>{{ $customers->jawaban}}</td>
-                {{-- <td>
-                    <div class="btn-group">
-                        <form action="/hapus_data_cust/{{ $customers['id'] }}" method="POST">
-                            @csrf
-                            <a href="/edit_data_menu/{{ $customers['id'] }}" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
-                            <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"><i class="bi bi-trash"></i></button>
-                        </form>
-                    </div>
-                </td> --}}
+                <td>{{ $customers->password }}</td>
+                <td>{{ $customers->pertanyaan_keamanan }}</td>
+                <td>{{ $customers->jawaban }}</td>
             </tr>
-            <?php 
-            $no++;
-            ?>
         @endforeach
     </tbody>
 </table>

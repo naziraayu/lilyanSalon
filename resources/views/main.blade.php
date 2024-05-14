@@ -712,7 +712,7 @@
     </section><!-- End Call-to-action Section -->
 
     <!-- Testimonials Section - Home Page -->
-    <section id="testimonials" class="testimonials">
+    {{-- <section id="testimonials" class="testimonials">
 
       <div class="container">
 
@@ -856,7 +856,7 @@
 
       </div>
 
-    </section><!-- End Testimonials Section -->
+    </section><!-- End Testimonials Section --> --}}
 
     <!-- Recent-posts Section - Home Page -->
     {{-- <section id="recent-posts" class="recent-posts">
@@ -968,19 +968,19 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
 
             <div class="row gy-4">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
                   <p>Jalan Cempaka</p>
-                  <p>Jember, Jawa Timur</p>
+                  {{-- <p>Jember, Jawa Timur</p> --}}
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
@@ -989,12 +989,12 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="info-item" data-aos="fade" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <p>virli@gmail.com</p>
+                  {{-- <p>contact@example.com</p> --}}
                 </div>
               </div><!-- End Info Item -->
 

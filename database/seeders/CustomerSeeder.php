@@ -15,10 +15,10 @@ class CustomerSeeder extends Seeder
     {
         DB::table('customer')->insert([
             'no_telp' => '081231559751',
-            'nama_lengkap' => 'Nazira Ayu',
-            'password' => '11111111',
+            'nama_lengkap' => 'Ananta',
+            'password' => '22222222',
             'pertanyaan_keamanan' => 'siapa disana?',
-            'jawaban' => 'inijeje',
+            'jawaban' => 'inijaja',
         ]);
     }
 }

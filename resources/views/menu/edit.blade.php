@@ -30,12 +30,12 @@
                             </ul>
                         </div>
                     @endif
-                    <br><br><br>
+                    <br>
                     @foreach ($data as $item)
                     <div class="card">
                         <br>
                         <div class="card-body">
-                            <form class="row g-3" id="data_menu_form" method="POST" action="/update_data_menu/{{ $item['id'] }}">
+                            <form class="row g-3" id="data_menu_form" method="POST" action="/update_data_menu/{{ $item['id'] }}" enctype="multipart/form-data">
                                 {!! csrf_field() !!}
                                 <div class="col-md-12">
                                     <div class="form-floating">
@@ -43,11 +43,17 @@
                                         <label for="cname">Nama Treatment</label>
                                     </div>
                                 </div>
-                                <div class="col-md-12">  
+                                <div class="col-md-6">  
                                     <div class="form-floating">
                                         <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga" value="{{ $item['harga'] }}">
                                         <label for="price">Harga</label>
                                     </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" id="image" name="image" placeholder="Upload">
+                                        <label for="image">Upload Gambar</label>
+                                      </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">

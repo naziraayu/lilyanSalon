@@ -85,6 +85,7 @@
         <tr>
             <th scope="col">No</th>
             <th scope="col">Nama Treatment</th>
+            <th scope="col">Gambar</th>
             <th scope="col">Harga</th>
             <th scope="col">Deskripsi</th>
             <th scope="col">Action</th>
@@ -96,6 +97,9 @@
             <tr>
                 <th scope="row">{{ $no }}</th> 
                 <td>{{ $item->nama_treatment }}</td>
+                <td>
+                    <img src="{{ asset($item->image) }}" alt="" style="width: 100px; height: 100px;">
+                </td>
                 <td>{{ $item->harga }}</td>
                 <td>{{ $item->deskripsi}}</td>
                 <td>

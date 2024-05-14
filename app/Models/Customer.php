@@ -2,21 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Booking;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Customer extends Model
 {
     protected $table = 'customer';
-    protected $primaryKey = 'id_customer';
-    protected $guarded = ['id_customer'];
-    // protected $fillable = [
-    //     'nama_treatment',
-    //     'harga',
-    //     'deskripsi',
-    // ];
+    protected $primaryKey = 'id';
+    protected $guarded = ['id'];
 
-    // public function booking() {
-    //     return $this->hasMany(Booking::class);
-    // }
+    public function booking() {
+        return $this->hasMany('booking');
+    }
 }

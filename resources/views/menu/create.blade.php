@@ -33,7 +33,7 @@
                     <div class="card">
                         <br>
                         <div class="card-body">
-                            <form class="row g-3" id="data_menu_form" method="POST" action="{{ route('tambah_data_menu') }}">
+                            <form class="row g-3" id="data_menu_form" method="POST" enctype="multipart/form-data" action="{{ route('tambah_data_menu') }}">
                                 {!! csrf_field() !!}
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -41,11 +41,17 @@
                                         <label for="cname">Nama Treatment</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-6">
                                     <div class="form-floating">
                                         <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga">
                                         <label for="price">Harga</label>
                                     </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control" id="image" name="image" placeholder="Upload">
+                                        <label for="image">Upload Gambar</label>
+                                      </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
