@@ -71,7 +71,9 @@ Route::get('price', function() {
 });
 
 //route ke dashboard admin
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+// Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // Route::get('/book', [BookingController::class, 'index'])->name('booking');
 Route::get('/booking', [BookingController::class, 'index'])->name('booking');;

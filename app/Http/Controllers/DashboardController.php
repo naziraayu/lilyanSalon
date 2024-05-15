@@ -1,26 +1,50 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Menu;
+use App\Models\Customer;
 use App\Models\User;
 use App\Models\Booking;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Request;
 
 class DashboardController extends Controller
 {
-    public function index() {
-        $totalTreatments = Menu::count();
-        $totalUsers = User::count();
-
-        $todayDate = Carbon::now()->format('Y-m-d');
-        $thisMonth = Carbon::now()->format('m');
-
-        // $totalBooking = Booking::count();
-        // $todayBooking = Booking::whereDate('created_at', $todayDate)->count();
-        // $thisMonthBooking = Booking::whereMonth('created_at', $thisMonth)->count();
-
-        return view('dashboard', compact('totalTreatments','totalUsers',));
+    public function index()
+    {
+        $bookingFilter = Request::get('booking_filter', 'today');
+        $customerFilter = Request::get('customer_filter', 'this_year');
+    
+        switch ($bookingFilter) {
+            case 'today':
+                $bookingCount = Booking::whereDate('tanggal', Carbon::today())->count();
+                break;
+            case 'this_month':
+                $bookingCount = Booking::whereMonth('tanggal', Carbon::now()->month)->count();
+                break;
+            case 'this_year':
+                $bookingCount = Booking::whereYear('tanggal', Carbon::now()->year)->count();
+                break;
+            default:
+                $bookingCount = Booking::count();
+        }
+    
+        switch ($customerFilter) {
+            case 'today':
+                $customerCount = Customer::whereDate('created_at', Carbon::today())->count();
+                break;
+            case 'this_month':
+                $customerCount = Customer::whereMonth('created_at', Carbon::now()->month)->count();
+                break;
+            case 'this_year':
+                $customerCount = Customer::whereYear('created_at', Carbon::now()->year)->count();
+                break;
+            default:
+                $customerCount = Customer::count();
+        }
+    
+        return view('dashboard', compact('bookingCount', 'customerCount', 'bookingFilter', 'customerFilter'));
     }
+    
+    
 }
