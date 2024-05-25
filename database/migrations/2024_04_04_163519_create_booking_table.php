@@ -15,7 +15,12 @@ return new class extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->time('jam');
+            $table->string('jam');
+            $table->string('service');
+            $table->string('kecamatan')->nullable();
+            $table->string('alamat')->nullable();
+            $table->bigInteger('akomodasi');
+            $table->string('status');
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('menu_id');
             $table->foreign('menu_id')

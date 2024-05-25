@@ -87,7 +87,8 @@
                     </div>
                     <div class="col-12">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="nama_treatment" placeholder="Menu Treatment" name="nama_treatment" value="{{ $item->nama_treatment }}" readonly>
+                            <input type="text" class="form-control" id="nama_treatment" placeholder="Menu Treatment" name="nama_treatment" 
+                            value="{{ $item->nama_treatment }}" readonly>
                             <label for="nama_treatment">Menu Treatment</label>
                         </div>
                     </div>
@@ -96,23 +97,85 @@
                             <select class="form-select" id="tambah_menu" name="tambah_menu" >
                                 <option value="">Pilih Tambahan Menu Treatment</option>
                                 @foreach($data_menu as $menu)
-                                <option value="{{ $menu->id }}|{{ $menu->harga }}">{{ $menu->nama_treatment }} - {{ $menu->harga }}</option>
+                                <option value="{{ $menu->id }}|{{ $menu->harga }}|{{ $menu->nama_treatment }}">{{ $menu->nama_treatment }} - {{ $menu->harga }}</option>
                                 @endforeach
                             </select>
                             <label for="tambah_menu">Tambahan Menu Treatment</label>
                         </div>
                     </div>  
-                    <div class="col-12">
+                    <div class="col-6">
                         <div class="form-floating">
-                            <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga" value="{{ $item->harga }}" readonly>
+                            <input type="number" class="form-control" id="akomodasi" name="akomodasi" placeholder="akomodasi" 
+                            value="{{ $item->akomodasi }}" readonly>
+                            <label for="akomodasi">Biaya akomodasi</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga" 
+                            value="{{ $item->harga }}" readonly>
                             <label for="harga">Grand Total</label>
                         </div>
                     </div>
-                    <script>
-                       document.addEventListener('DOMContentLoaded', function() {
+                    {{-- <script>
+                        //script yang bener
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // Fungsi untuk memformat angka
+                            function numberFormat(number) {
+                                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                            }
+                    
                             var tambahMenuSelect = document.getElementById('tambah_menu');
                             var grandTotalInput = document.getElementById('harga');
-                            var basePrice = parseFloat(grandTotalInput.value || 0);
+                            var basePrice = parseFloat(grandTotalInput.value.replace(/\./g, '') || 0);
+                            var selectedAdditionalMenu = false;
+                    
+                            tambahMenuSelect.addEventListener('change', function() {
+                                if (!selectedAdditionalMenu && this.value !== "") {
+                                    var menuInfo = this.value.split('|');
+                                    var harga = parseFloat(menuInfo[1]);
+                    
+                                    var newGrandTotal = basePrice + harga;
+                                    grandTotalInput.value = numberFormat(newGrandTotal.toFixed(0));
+                    
+                                    selectedAdditionalMenu = true;
+                                }
+                            });
+                    
+                            var bayarInput = document.getElementById('bayar');
+                            var kembalianInput = document.getElementById('kembalian');
+                    
+                            bayarInput.addEventListener('input', function() {
+                                var bayar = parseFloat(this.value.replace(/\./g, '') || 0);
+                                var grandTotal = parseFloat(grandTotalInput.value.replace(/\./g, '') || 0);
+                                
+                                // Validasi agar bayar tidak kurang dari harga
+                                if (bayar < grandTotal) {
+                                    kembalianInput.value = "Bayar tidak cukup";
+                                } else {
+                                    var kembalian = bayar - grandTotal;
+                                    kembalianInput.value = numberFormat(kembalian.toFixed(0));
+                                }
+                            });
+                    
+                            // Menambahkan event listener untuk memformat angka saat input berubah
+                            [bayarInput, kembalianInput].forEach(function(input) {
+                                input.addEventListener('input', function() {
+                                    this.value = numberFormat(parseFloat(this.value.replace(/\./g, '') || 0));
+                                });
+                            });
+                        });
+                    </script>               --}}
+                    {{-- <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                            // Fungsi untuk memformat angka
+                            function numberFormat(number) {
+                                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                            }
+
+                            var tambahMenuSelect = document.getElementById('tambah_menu');
+                            var grandTotalInput = document.getElementById('harga');
+                            var basePrice = parseFloat(grandTotalInput.value.replace(/\./g, '') || 0);
                             var selectedAdditionalMenu = false;
 
                             tambahMenuSelect.addEventListener('change', function() {
@@ -121,6 +184,55 @@
                                     var harga = parseFloat(menuInfo[1]);
 
                                     var newGrandTotal = basePrice + harga;
+                                    grandTotalInput.value = numberFormat(newGrandTotal.toFixed(0));
+
+                                    selectedAdditionalMenu = true;
+                                }
+                            });
+
+                            var bayarInput = document.getElementById('bayar');
+                            var kembalianInput = document.getElementById('kembalian');
+
+                            bayarInput.addEventListener('input', function() {
+                                var bayar = parseFloat(this.value.replace(/\./g, '') || 0);
+                                var grandTotal = parseFloat(grandTotalInput.value.replace(/\./g, '') || 0);
+                                
+                                // Validasi agar bayar tidak kurang dari harga
+                                if (bayar < grandTotal) {
+                                    kembalianInput.value = "Bayar tidak cukup";
+                                } else {
+                                    var kembalian = bayar - grandTotal;
+                                    kembalianInput.value = numberFormat(kembalian.toFixed(0));
+                                }
+                            });
+
+                            // Menambahkan event listener untuk memformat angka saat input berubah
+                            [bayarInput, kembalianInput].forEach(function(input) {
+                                input.addEventListener('input', function() {
+                                    this.value = numberFormat(parseFloat(this.value.replace(/\./g, '') || 0));
+                                });
+                            });
+                        });
+                    </script> --}}
+                    <script>
+                       document.addEventListener('DOMContentLoaded', function() {
+                            var tambahMenuSelect = document.getElementById('tambah_menu');
+                            var grandTotalInput = document.getElementById('harga');
+                            var akomodasiInput = document.getElementById('akomodasi');
+                            var basePrice = parseFloat(grandTotalInput.value || 0);
+                            var akomodasiPrice = parseFloat(akomodasiInput.value || 0);
+                            var selectedAdditionalMenu = false;
+
+                            // Menambahkan akomodasi ke base price
+                            var basePriceWithAkomodasi = basePrice + akomodasiPrice;
+                            grandTotalInput.value = basePriceWithAkomodasi.toFixed(2);
+
+                            tambahMenuSelect.addEventListener('change', function() {
+                                if (!selectedAdditionalMenu && this.value !== "") {
+                                    var menuInfo = this.value.split('|');
+                                    var harga = parseFloat(menuInfo[1]);
+
+                                    var newGrandTotal = basePriceWithAkomodasi + harga;
                                     grandTotalInput.value = newGrandTotal.toFixed(2);
 
                                     selectedAdditionalMenu = true;
@@ -143,30 +255,10 @@
                             });
                         });
                     </script>
-                    {{-- <script>
-                        // Mendapatkan elemen select dan input
-                        var additionalMenuSelect = document.getElementById('tambah_menu');
-                        var hargaInput = document.getElementById('harga');
-                    
-                        // Event listener untuk perubahan pada select
-                        additionalMenuSelect.addEventListener('change', function() {
-                            // Mendapatkan nilai harga tambahan menu yang dipilih
-                            var additionalMenuPrice = parseFloat(this.value);
-                            
-                            // Mendapatkan nilai grand total yang sudah ada
-                            var grandTotal = parseFloat(hargaInput.value);
-                            
-                            // Menghitung grand total baru
-                            var newGrandTotal = grandTotal + additionalMenuPrice;
-                    
-                            // Memperbarui nilai input grand total
-                            hargaInput.value = newGrandTotal;
-                        });
-                    </script> --}}
                     @endforeach
                     <div class="col-6">
                         <div class="form-floating">
-                            <input type="number" class="form-control" id="bayar" name="bayar" placeholder="Bayar">
+                            <input type="number" class="form-control" id="bayar" name="bayar" placeholder="Bayar" >
                             <label for="bayar">Bayar</label>
                         </div>
                     </div>
@@ -176,9 +268,54 @@
                             <label for="kembalian">Kembalian</label>
                         </div>
                     </div>
+                    {{-- <script>
+                        //ini juga bener
+                        document.addEventListener('DOMContentLoaded', function() {
+                            // Fungsi untuk memformat angka dengan titik sebagai pemisah ribuan
+                            function numberFormat(number) {
+                                return number.toLocaleString('id-ID', { minimumFractionDigits: 0 });
+                            }
+                    
+                            var tambahMenuSelect = document.getElementById('tambah_menu');
+                            var grandTotalInput = document.getElementById('harga');
+                            var basePrice = parseFloat(grandTotalInput.value.replace(/\./g, '') || 0);
+                    
+                            tambahMenuSelect.addEventListener('change', function() {
+                                var menuInfo = this.value.split('|');
+                                if (menuInfo.length >= 2) {
+                                    var harga = parseFloat(menuInfo[1]);
+                                    var newGrandTotal = basePrice + harga;
+                                    grandTotalInput.value = numberFormat(newGrandTotal);
+                                } else {
+                                    grandTotalInput.value = numberFormat(basePrice);
+                                }
+                            });
+                    
+                            var bayarInput = document.getElementById('bayar');
+                            var kembalianInput = document.getElementById('kembalian');
+                    
+                            bayarInput.addEventListener('input', function() {
+                                var bayar = parseFloat(this.value.replace(/\./g, '') || 0);
+                                var grandTotal = parseFloat(grandTotalInput.value.replace(/\./g, '') || 0);
+                    
+                                // Validasi agar bayar tidak kurang dari harga
+                                if (bayar < grandTotal) {
+                                    kembalianInput.value = "Bayar tidak cukup";
+                                } else {
+                                    var kembalian = bayar - grandTotal;
+                                    kembalianInput.value = numberFormat(kembalian);
+                                }
+                            });
+                    
+                            // Menambahkan event listener untuk memformat angka saat input berubah
+                            bayarInput.addEventListener('input', function() {
+                                this.value = numberFormat(parseFloat(this.value.replace(/\./g, '') || 0));
+                            });
+                        });
+                    </script> --}}
                     <div class="text-center">
                         <button type="reset" class="btn btn-danger">Batal</button>
-                        <button type="submit" class="btn" style="background-color: #864659; color: #fff; margin-left:700px;">Bayar</button>
+                        <button id="submitTransaksi" type="submit" class="btn" style="background-color: #864659; color: #fff; margin-left:700px;">Bayar</button>
                     </div>
                 </form>
             </div>

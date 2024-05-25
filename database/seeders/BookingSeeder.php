@@ -15,9 +15,14 @@ class BookingSeeder extends Seeder
     {
         DB::table('booking')->insert([
             'tanggal' => '2024-09-01',
-            'jam' => '12.00',
-            'customer_id' => '1',
-            'menu_id' => '1',
+            'jam' => '12.00 - 13.00',
+            'service' => 'Home Service',
+            'kecamatan' => 'Sumbersari',
+            'alamat' => 'Jln Bengawan Solo',
+            'akomodasi' => '20000',
+            'status' => 'Belum Bayar',   
+            'customer_id' => '3',
+            'menu_id' => '10',
         ]);
     }
 }

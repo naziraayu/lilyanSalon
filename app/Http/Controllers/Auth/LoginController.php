@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
@@ -15,15 +16,43 @@ class LoginController extends Controller
     // }
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        // Validasi input
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
+        // Coba melakukan login
         if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            return redirect()->route('dashboard'); // Ganti 'admin.dashboard' dengan nama rute halaman admin Anda
+            // Jika berhasil, redirect ke dashboard
+            return redirect()->route('menu.index')->with('success', 'Berhasil Login!');
+        } else {
+            // Jika gagal, kembali ke halaman login dengan pesan error
+            return back()->withErrors([
+                'email' => 'Email atau password salah.',
+            ]);
         }
+        
+        // $credentials = $request->only('email', 'password');
 
-        // Jika autentikasi gagal, kembalikan ke halaman login dengan pesan error
-        return redirect()->route('login')->with(['error' => 'Email atau password salah.']);
+        // if (Auth::attempt($credentials)) {
+            
+        //     alert()->success('success','Berhasil login');
+
+        //     // Authentication passed...
+        //     return redirect()->route('menu.index'); // Ganti 'admin.dashboard' dengan nama rute halaman admin Anda
+        // }
+
+        // // Jika autentikasi gagal, kembalikan ke halaman login dengan pesan error
+        // return redirect()->route('login')->with(['error' => 'Email atau password salah.']);
+    }
+    public function logout(Request $request) {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+    
+        // Set session success message
+        return redirect('/')->with('success', 'Berhasil logout');
     }
     // public function login(Request $request) {
     //     $this->validate($request, [

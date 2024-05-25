@@ -7,7 +7,7 @@
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="icon_document_alt"></i> Menu Treatment</h3>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('dashboard') }}"><i class="bi bi-house-door"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('menu.index') }}"><i class="bi bi-house-door"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ url('data_menu') }}">Menu Treatment</a></li>
                     <li class="breadcrumb-item active">Edit Menu Treatment</li>
                 </ol>

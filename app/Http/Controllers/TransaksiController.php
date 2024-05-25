@@ -56,7 +56,7 @@ class TransaksiController extends Controller
             'booking_id' => 'required|exists:booking,id',
             'tambah_menu' => 'nullable|string',
             'harga' => 'required|numeric|min:0',
-            'bayar' => 'required|numeric|min:0',
+            'bayar' => 'required|numeric|min:0', 
         ]);
     
         // Ambil harga dasar dari booking
@@ -67,9 +67,10 @@ class TransaksiController extends Controller
         }
     
         $basePrice = $booking->menu ? $booking->menu->harga : 0;
+        $akomodasi = $booking->akomodasi ? $booking->akomodasi : 0;
     
         // Hitung total harga
-        $harga = $basePrice;
+        $harga = $basePrice + $akomodasi;
         if ($request->has('tambah_menu') && !empty($request->tambah_menu)) {
             $menuData = explode('|', $request->tambah_menu);
             if (count($menuData) >= 2) {
@@ -81,7 +82,7 @@ class TransaksiController extends Controller
         $bayar = (float) $request->input('bayar');
         $kembalian = $bayar > $harga ? $bayar - $harga : 0;
     
-        DB::transaction(function () use ($request, $harga, $kembalian) {
+        DB::transaction(function () use ($request, $harga, $kembalian, $booking) {
             // Simpan data ke tabel transaksi
             $transaksi = Transaksi::create([
                 'id_transaksi' => $request->id_transaksi,
@@ -99,59 +100,44 @@ class TransaksiController extends Controller
                 if (count($menuData) >= 2) {
                     $menu_id = $menuData[0];
                     $harga = $menuData[1];
+                    $nama_treatment = $menuData[2];
     
                     DetailTransaksi::create([
                         'transaksi_id' => $transaksi->id_transaksi,
                         'menu_id' => $menu_id,
+                        'nama_treatment' => $nama_treatment,
                         'harga' => $harga,
                     ]);
                 }
             }
+            
         });
+
+        // Update status booking menjadi "Sudah bayar"
+        $booking->status = 'Sudah bayar';
+        $booking->save();
     
-        // DB::transaction(function () use ($request) {
-        //     // Simpan data ke tabel transaksi
-        //     $transaksi = Transaksi::create([
-        //         'id_transaksi' => $request->id_transaksi,
-        //         'grand_total' => $request->harga,
-        //         'kembalian' => $request->kembalian,
-        //         'bayar' => $request->bayar,
-        //         'booking_id' => $request->booking_id,
-        //         'menu_id' => $request->menu_id,
-        //         'customer_id' => $request->customer_id,
-        //     ]);
-    
-        //     // Simpan data ke tabel detail_transaksi jika ada tambahan menu
-        // if ($request->has('tambah_menu') && !empty($request->tambah_menu)) {
-        //     // Explode string menu menjadi array
-        //     $menuData = explode('|', $request->tambah_menu);
-
-        //     // Pastikan array memiliki setidaknya dua elemen (menu_id dan harga)
-        //     if (count($menuData) >= 2) {
-        //         $menu_id = $menuData[0];
-        //         $harga = $menuData[1];
-
-        //         // Lanjutkan dengan menyimpan data ke tabel detail_transaksi
-        //         DetailTransaksi::create([
-        //             'transaksi_id' => $transaksi->id_transaksi,
-        //             'menu_id' => $menu_id,
-        //             'harga' => $harga,
-        //         ]);
-        //     }
-        // }
-        // });
-
         return redirect()->route('riwayatTransaksi')->with('success', 'Transaksi berhasil disimpan!');
     }
     public function riwayatTransaksi()
     {
         // Ambil data transaksi dari tabel dengan join ke tabel customer
         $transaksi = DB::table('transaksi')
-                        ->select('transaksi.*', 'customer.nama_lengkap', 'menu.nama_treatment', 'menu.harga', 'menu.image')
+                        ->select('transaksi.*', 'customer.nama_lengkap', 'menu.nama_treatment', 'menu.harga', 'menu.image', 'booking.tanggal', 'booking.jam', 'booking.akomodasi')
                         ->join('customer', 'transaksi.customer_id', '=', 'customer.id')
                         ->join('menu', 'transaksi.menu_id', '=', 'menu.id')
-                        // ->join('detail_transaksi', 'transaksi.id', '=', 'detail_transaksi.transaksi_id')
+                        ->join('booking', 'transaksi.booking_id', '=', 'booking.id')
                         ->get();
+
+        // Ambil detail transaksi untuk setiap transaksi
+        foreach ($transaksi as $key => $transaksis) {
+        $detailTransaksi = DB::table('detail_transaksi')
+                            ->where('transaksi_id', $transaksis->id_transaksi)
+                            ->get();
+
+        // Tambahkan detail transaksi ke dalam array transaksi
+        $transaksis->detail = $detailTransaksi;
+        }
 
         // Tampilkan view riwayatTransaksi dengan data transaksi
         return view('riwayatTransaksi', ['transaksi' => $transaksi]);

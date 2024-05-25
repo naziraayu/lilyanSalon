@@ -17,7 +17,7 @@ class MenuSeeder extends Seeder
             'nama_treatment' => 'Potong',
             'harga' => '20000',
             'deskripsi' => 'Hair Treatment',
-            'image' => 'gambar.png',
+            'image' => 'salon.png',
         ]);
     }
 }

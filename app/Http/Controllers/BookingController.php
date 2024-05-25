@@ -9,17 +9,15 @@ use Illuminate\Http\Request;
 class BookingController extends Controller
 {
     public function index(){
-        // return view('booking',['booking' => Booking::all()]);
-        // $data = Booking::get();
-        // $data2 = Customer::get();
-        // return view('booking',compact('data','data2'));
 
         $data = Booking::leftJoin('customer', 'booking.customer_id', '=', 'customer.id')
-                    ->select('booking.*', 'customer.nama_lengkap')
+                    ->leftJoin('menu', 'booking.menu_id', '=', 'menu.id')
+                    ->select('booking.*', 'customer.nama_lengkap', 'menu.image', 'menu.nama_treatment')
+                    ->orderBy('booking.id', 'desc')
                     ->get();
 
-    return view('booking', compact('data'));
-    }
+        return view('booking', compact('data'));
+    } 
 //     public function index2(){
 //    	 $booking = Booking::all();
 //     	 return view('booking',['booking' => $booking]);

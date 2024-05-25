@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('menu', function (Blueprint $table) {
             $table->id();
             $table->string('nama_treatment');
-            $table->biginteger('harga');
+            $table->bigInteger('harga');
             $table->string('deskripsi');
             $table->string('image')->nullable();
             $table->timestamps();

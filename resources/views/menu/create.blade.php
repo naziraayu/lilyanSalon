@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="icon_document_alt"></i> Menu Treatment</h3>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('menu.index') }}"><i class="bi bi-house-door"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ url('data_menu') }}">Menu Treatment</a></li>
                     <li class="breadcrumb-item active">Tambah Menu Treatment</li>
                 </ol>
@@ -44,9 +44,9 @@
                                 <div class="col-6">
                                     <div class="form-floating">
                                         <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga">
-                                        <label for="price">Harga</label>
+                                        <label for="harga">Harga</label>
                                     </div>
-                                </div>
+                                </div>       
                                 <div class="col-6">
                                     <div class="form-floating">
                                         <input type="file" class="form-control" id="image" name="image" placeholder="Upload">
@@ -64,7 +64,6 @@
                                     <button type="submit" class="btn" style="background-color: #864659; color: #fff; margin-left:700px;" >Simpan</button>
                                 </div>
                             </form><!-- End floating Labels Form -->
-                    
                         </div>
                     </div>
                 </section>

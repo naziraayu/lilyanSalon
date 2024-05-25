@@ -9,12 +9,15 @@
   <title>Lily Ann Salon</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  
   <!-- Favicons -->
   <link href="asset/img/favicon.png" rel="icon">
   <link href="asset/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Oooh+Baby&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&display=swap" rel="stylesheet">
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -31,6 +34,7 @@
   <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
 
 
   <!-- =======================================================
@@ -304,7 +308,35 @@
   <script src="asset/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="asset/vendor/tinymce/tinymce.min.js"></script>
   <script src="asset/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+          $('#delete-button').on('click', function(e) {
+              e.preventDefault();
 
+          Swal.fire({
+            title: "Are you sure?",
+            text: "Anda ingin menghapus menu ini?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              $('#delete-form').submit();
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+              });
+            }
+          });
+        })
+    });
+</script>
   <!-- Template Main JS File -->
   <script src="asset/js/main.js"></script>
 

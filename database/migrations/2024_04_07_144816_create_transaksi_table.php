@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->string('id_transaksi')->primary()->unique();
-            $table->decimal('grand_total')->nullable();
-            $table->decimal('kembalian')->nullable();
-            $table->decimal('bayar')->nullable();
+            $table->bigInteger('grand_total')->nullable();
+            $table->bigInteger('kembalian')->nullable();
+            $table->bigInteger('bayar')->nullable();
             $table->unsignedBigInteger('booking_id');
             $table->foreign('booking_id')
             ->references('id')

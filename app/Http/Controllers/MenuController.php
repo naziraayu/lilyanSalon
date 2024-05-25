@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
 
 class MenuController extends Controller
 {
     public function index(){
-        $data = Menu::get();
+        $data = Menu::orderBy('id', 'desc')->get();
         return view('menu.index',compact('data'));
     }
     public function cetakMenu(){
@@ -27,6 +28,9 @@ class MenuController extends Controller
             'deskripsi' => 'required',
             'image' => 'nullable|mimes:png,jpg,jpeg,webp',
         ]);
+
+        // Hapus pemisah ribuan dari input harga
+        // $cleanedHarga = str_replace(['.', ',', 'Rp. '], '', $request->harga);
 
         if($request->has('image')) {
             $file = $request->file('image');
@@ -84,8 +88,6 @@ class MenuController extends Controller
         if(File::exists($menu->image)) {
             File::delete($menu->image);
         }
-
-        // $menu->image = $path.'/'.$filename;
     }
 
     // Simpan data jika validasi berhail
@@ -99,8 +101,12 @@ class MenuController extends Controller
     return redirect()->route('data_menu')->with('success','Menu Treatment telah berhasil di update.');
     }
     public function destroy($id){
-        DB::table('menu')->where('id', $id)->delete();
-        return redirect()->route('data_menu')->with('success' ,"Menu Treatment berhasil di hapus");
+        $delete = DB::table('menu')->where('id', $id)->delete();
+        if ($delete) {
+            return response()->json(['success' => true, 'message' => 'Menu Treatment berhasil dihapus']);
+        } else {
+            return response()->json(['success' => false, 'message' => 'Gagal menghapus Menu Treatment']);
+        }
     }
     
 }

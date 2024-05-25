@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('transaksi_id');
             $table->unsignedBigInteger('menu_id');
             $table->string('nama_treatment')->nullable();
-            $table->decimal('harga', 10, 2);
+            $table->bigInteger('harga');
             $table->foreign('transaksi_id')
             ->references('id_transaksi')
             ->on('transaksi')

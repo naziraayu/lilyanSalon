@@ -4,12 +4,12 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link " href="{{ url('dashboard') }}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a> 
-      </li><!-- End Dashboard Nav -->
+      </li><!-- End Dashboard Nav --> --}}
 
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -186,14 +186,14 @@
           <i class="bi bi-inboxes"></i>
           <span>Booking</span>
         </a>
-      </li><!-- End Contact Page Nav -->
+      </li><!-- En Booking Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('customer') }}">
           <i class="bi bi-person"></i>
           <span>Data Customer</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End Data Customer Nav -->
 
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('transaksi') }}">
@@ -209,12 +209,15 @@
         </a>
       </li><!-- End Register Page Nav --> --}}
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('logout') }}">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Logout</span> 
-        </a>
-      </li><!-- End Login Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Logout</span> 
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        </li><!-- End Login Page Nav -->
 
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="pages-error-404.html">

@@ -38,22 +38,22 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 
-Route::get('/admin', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/admin', [MenuController::class, 'index'])->name('menu.index');
 
 Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])
-    ->name('password.request');
+    ->name('custom.password.request');
 
 // Rute untuk mengirim email reset kata sandi
 Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])
-    ->name('password.email');
+    ->name('custom.password.email');
 
 // Rute untuk menampilkan formulir reset kata sandi
 Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])
-    ->name('password.reset');
+    ->name('custom.password.reset');
 
 // Rute untuk proses reset kata sandi
 Route::post('/reset-password', [ResetPasswordController::class, 'reset'])
-    ->name('password.update');
+    ->name('custom.password.update');
 
 //route admin
 Route::get('/data_menu', [MenuController::class, 'index'])->name('data_menu');
@@ -61,13 +61,22 @@ Route::get('/tambah_data_menu', [MenuController::class,'create'])->name('tambah_
 Route::post('/tambah_data_menu', [MenuController::class,'store'])->name('tambah_data_menu');
 Route::get('/edit_data_menu/{id}', [MenuController::class,'edit'])->name('edit_data_menu');
 Route::post('/update_data_menu/{id}', [MenuController::class,'update']);
-Route::post('/hapus_data_menu/{id}', [MenuController::class,'destroy'])->name('hapus_data_menu');
+Route::delete('/hapus_data_menu/{id}', [MenuController::class,'destroy'])->name('hapus_data_menu');
 // Route::get('/admin',[MenuController::class,'index'])->name('admin');
-Route::get('/logout',[LoginController::class,'logout'])->name('logout');Route::get('/cetak', [MenuController::class, 'cetakMenu'])->name('cetak_menu');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+Route::get('/cetak', [MenuController::class, 'cetakMenu'])->name('cetak_menu');
 
 //route pricelist
 Route::get('price', function() {
-    return view('price');
+    return view('landing_page.price');
+});
+
+Route::get('service', function() {
+    return view('landing_page.service');
+});
+
+Route::get('contact', function() {
+    return view('landing_page.contact');
 });
 
 //route ke dashboard admin
