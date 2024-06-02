@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-floating">
-                                        <input type="file" class="form-control" id="image" name="image" placeholder="Upload">
+                                        <input type="file" class="form-control" id="image" name="image" placeholder="Upload" value="{{ $item['image'] }}">
                                         <label for="image">Upload Gambar</label>
                                       </div>
                                 </div>
@@ -66,7 +66,20 @@
                                     <button type="submit" class="btn" style="background-color: #864659; color: #fff; margin-left:700px;">Simpan</button>
                                 </div>
                             </form><!-- End floating Labels Form -->
-                    
+                            <script>
+                                document.getElementById('data_menu_form').addEventListener('submit', function(event) {
+                                    var imageInput = document.getElementById('image');
+                                    if (imageInput.files.length === 0) {
+                                        event.preventDefault(); // Mencegah pengiriman form
+                                        Swal.fire({
+                                            icon: 'warning',
+                                            title: 'Peringatan',
+                                            text: 'Silakan unggah gambar sebelum menyimpan.',
+                                            confirmButtonColor: '#864659'
+                                        });
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                     @endforeach
@@ -76,3 +89,7 @@
     </section>
 </section>
 @endsection
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -8,7 +8,7 @@
             icon: "success",
             title: "{{ session('success') }}",
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
         });
     </script>
 @endif

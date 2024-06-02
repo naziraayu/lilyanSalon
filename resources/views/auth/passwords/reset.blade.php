@@ -89,10 +89,10 @@
                 <div class="col-lg-7">
                     <div class="card1">
                         <div class="row">
-                            <img src="img/lily_ann__3_-removebg-preview.png" class="logo">
+                            <img src="img/logo.png" class="logo">
                         </div>
                         <div class="row px-5 justify-content-center border-line">
-                            <img src="img/Beauty salon-pana.png" class="image">
+                            <img src="img/Beauty salon-rafiki.png" class="image">
                         </div>
                     </div>
                 </div>
@@ -232,10 +232,10 @@
         background-color: #EDDEE2;
         background-repeat: no-repeat;
     }
-    .card1 .image {
+    /* .card1 .image {
         width: 70%; 
         height: auto;
-    }
+    } */
 
     .card0 {
         box-shadow: 0px 4px 8px 0px #757575;

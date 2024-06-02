@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <ol class="widget-49-meeting-points" type="none">
-                            <li type="none" class="widget-49-meeting-item">Nama Treatment: <span>{{ $transaksis->nama_treatment }}</span></li>
+                            <li type="none" class="widget-49-meeting-item">Treatment: <span>{{ $transaksis->nama_treatment }}</span></li>
                             <li type="none" class="widget-49-meeting-item">Grand Total: <span>{{ $transaksis->grand_total }}</span></li>
                             {{-- <li class="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span></li> --}}
                         </ol>

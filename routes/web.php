@@ -14,6 +14,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\OwnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 
 Auth::routes();
 
-// Route::get('/login',[LoginController::class, 'index'])->name('login');
+// Route::get('/login',[OwnerController::class, 'login'])->name('owner.login');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -54,6 +55,9 @@ Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showRese
 // Rute untuk proses reset kata sandi
 Route::post('/reset-password', [ResetPasswordController::class, 'reset'])
     ->name('custom.password.update');
+
+//route login biasa
+
 
 //route admin
 Route::get('/data_menu', [MenuController::class, 'index'])->name('data_menu');

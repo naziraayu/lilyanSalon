@@ -4,6 +4,76 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-app"></i><span>Master</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ url('data_menu') }}">
+              <i class="bi bi-circle"></i><span>Menu Treatment</span>
+            </a>
+          </li>
+          {{-- <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-editors.html">
+              <i class="bi bi-circle"></i><span>Form Editors</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span>Form Validation</span>
+            </a>
+          </li> --}}
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-cash"></i><span>Transaksi</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{ url('detail_transaksi') }}">
+              <i class="bi bi-circle"></i><span>Pembayaran</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url('riwayat_transaksi') }}">
+              <i class="bi bi-circle"></i><span>Riwayat Transaksi</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Transaksi Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed active" href="{{ url('booking') }}"">
+          <i class="bi bi-inboxes"></i>
+          <span>Booking</span>
+        </a>
+      </li><!-- En Booking Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ url('customer') }}">
+          <i class="bi bi-person"></i>
+          <span>Data Customer</span>
+        </a>
+      </li><!-- End Data Customer Nav -->
+
+      <li class="nav-item" style="margin-top: 300px">
+        <a class="nav-link collapsed" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Logout</span> 
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+      </form>
+      </li><!-- End Login Page Nav -->
+
       {{-- <li class="nav-item">
         <a class="nav-link " href="{{ url('dashboard') }}">
           <i class="bi bi-grid"></i>
@@ -89,52 +159,6 @@
         </ul>
       </li><!-- End Components Nav --> --}}
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-app"></i><span>Master</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="{{ url('data_menu') }}">
-              <i class="bi bi-circle"></i><span>Menu Treatment</span>
-            </a>
-          </li>
-          {{-- <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
-            </a>
-          </li> --}}
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-cash"></i><span>Transaksi</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="{{ url('transaksi') }}">
-              <i class="bi bi-circle"></i><span>Pembayaran</span>
-            </a>
-          </li>
-          <li>
-            <a href="{{ url('riwayat_transaksi') }}">
-              <i class="bi bi-circle"></i><span>Riwayat Transaksi</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Transaksi Nav -->
-
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -181,20 +205,6 @@
         </ul>
       </li><!-- End Icons Nav -->  --}}
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ url('booking') }}"">
-          <i class="bi bi-inboxes"></i>
-          <span>Booking</span>
-        </a>
-      </li><!-- En Booking Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ url('customer') }}">
-          <i class="bi bi-person"></i>
-          <span>Data Customer</span>
-        </a>
-      </li><!-- End Data Customer Nav -->
-
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('transaksi') }}">
           <i class="bi bi-cash"></i>
@@ -208,16 +218,6 @@
           <span>Register</span>
         </a>
       </li><!-- End Register Page Nav --> --}}
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-            <i class="bi bi-box-arrow-in-right"></i>
-            <span>Logout</span> 
-          </a>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
-        </li><!-- End Login Page Nav -->
 
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="pages-error-404.html">

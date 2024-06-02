@@ -32,7 +32,7 @@ class LoginController extends Controller
                 'email' => 'Email atau password salah.',
             ]);
         }
-        
+    }
         // $credentials = $request->only('email', 'password');
 
         // if (Auth::attempt($credentials)) {
@@ -45,7 +45,7 @@ class LoginController extends Controller
 
         // // Jika autentikasi gagal, kembalikan ke halaman login dengan pesan error
         // return redirect()->route('login')->with(['error' => 'Email atau password salah.']);
-    }
+    
     public function logout(Request $request) {
         Auth::logout();
         $request->session()->invalidate();
