@@ -163,7 +163,7 @@
                                     <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                                     <div>
                                         <h4>Email</h4>
-                                        <p class="mb-0">info@example.com</p>
+                                        <p class="mb-0">aylanazefanya2gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                                     <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
                                     <div>
                                         <h4>Telephone</h4>
-                                        <p class="mb-0">(+012) 3456 7890 123</p>
+                                        <p class="mb-0">+62 821-3939-1288</p>
                                     </div>
                                 </div>
                             </div>
@@ -224,8 +224,8 @@
                             <h4 class="mb-4 text-white">Follow Us</h4>
                             <a href="https://www.instagram.com/_lilyansalon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fas fa-angle-right me-2"></i> Instagram</a>
                             <h4 class="my-4 text-white">Contact Us</h4>
-                            <p class="mb-0"><i class="fas fa-envelope text-secondary me-2"></i> info@example.com</p>
-                            <p class="mb-0"><i class="fas fa-phone text-secondary me-2"></i> (+012) 3456 7890 123</p>
+                            <p class="mb-0"><i class="fas fa-envelope text-secondary me-2"></i> aylanazefanya2gmail.com</p>
+                            <p class="mb-0"><i class="fas fa-phone text-secondary me-2"></i> +62 821-3939-1288</p>
                         </div>
                     </div>
                 </div>

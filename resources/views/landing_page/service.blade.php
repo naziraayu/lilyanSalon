@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Sparlex - Spa Website Template</title>
+        <title>Lily Ann Salon</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -117,7 +117,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Cuci Blow</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang mencakup pencucian rambut dan pengeringan dengan menggunakan teknik blow dryer untuk memberikan tampilan yang lebih bervolume pada rambut.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Cuci Catok</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang mencakup pencucian rambut dan pengeringan dengan menggunakan teknik catok untuk merapikan rambut dan memberikan tampilan yang lebih halus dan lurus.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Potong Cuci Tonic</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang mencakup pencucian rambut, pemotongan rambut, dan aplikasi tonic untuk memperkuat akar rambut dan mencegah kerontokan.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Potong Cuci Blow</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang mencakup pencucian rambut, pemotongan rambut, dan pengeringan dengan menggunakan teknik blow dryer untuk memberikan tampilan yang lebih bervolume pada rambut.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -189,7 +189,8 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Potong</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang mencakup pemotongan rambut sesuai dengan model yang diinginkan oleh pelanggan.
+                                        </p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -212,7 +213,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Cuci Curly</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang mencakup pencucian rambut dan rambut akan diatur kembali dengan teknik curly styling.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -225,7 +226,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Smoothing</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang bertujuan untuk meratakan dan meluruskan rambut yang keriting atau berombak, memberikan tampilan yang lebih halus dan mudah diatur.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -257,7 +258,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Lashlift</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Merupakan perawatan rambut yang bertujuan untuk meratakan dan meluruskan rambut yang keriting atau berombak, memberikan tampilan yang lebih halus dan mudah diatur.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -280,7 +281,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Message Wajah</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Perawatan untuk wajah yang mencakup teknik pemijatan untuk meredakan ketegangan otot wajah, meningkatkan sirkulasi darah, dan memberikan efek rileks pada kulit wajah.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -293,7 +294,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Facial Sari Ayu</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Perawatan wajah dengan menggunakan produk perawatan dari brand Sari Ayu yang terkenal akan kualitasnya. Facial Sari Ayu bertujuan untuk membersihkan, merawat, dan menjaga kelembutan kulit wajah.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -316,7 +317,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Facial Viva</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Perawatan wajah yang menggunakan produk perawatan dari brand Viva. Facial Viva bertujuan untuk membersihkan kulit wajah dari kotoran dan minyak berlebih, serta memberikan nutrisi yang dibutuhkan oleh kulit.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -342,7 +343,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Hair Mask Panjang</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Perawatan rambut dengan menggunakan hair mask khusus untuk rambut panjang. Membantu melembapkan, menguatkan, dan merawat rambut agar tetap sehat dan berkilau.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -365,7 +366,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Hair Mask Medium</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Perawatan rambut dengan menggunakan hair mask khusus untuk rambut panjang. Membantu melembapkan, menguatkan, dan merawat rambut agar tetap sehat dan berkilau.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -378,7 +379,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-end">
                                         <h3>Hair Mask Pendek</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Perawatan rambut dengan menggunakan hair mask khusus untuk rambut pendek. Membantu merawat rambut pendek agar tetap sehat, lembut, dan mudah diatur.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -401,7 +402,7 @@
                                 <div class="col-8">
                                     <div class="services-content text-start">
                                         <h3>Creambath</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                        <p>Creambath bertujuan untuk melembapkan rambut, mengurangi ketombe, dan merilekskan kulit kepala.</p>
                                         {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                     </div>
                                 </div>
@@ -444,8 +445,8 @@
                             <a href="https://www.instagram.com/_lilyansalon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fas fa-angle-right me-2"></i> Instagram</a>
                             {{-- <a href=""><i class="fas fa-angle-right me-2"></i> Twitter</a> --}}
                             <h4 class="my-4 text-white">Contact Us</h4>
-                            <p class="mb-0"><i class="fas fa-envelope text-secondary me-2"></i> info@example.com</p>
-                            <p class="mb-0"><i class="fas fa-phone text-secondary me-2"></i> (+012) 3456 7890 123</p>
+                            <p class="mb-0"><i class="fas fa-envelope text-secondary me-2"></i> aylanazefanya2gmail.com</p>
+                            <p class="mb-0"><i class="fas fa-phone text-secondary me-2"></i> +62 821-3939-1288</p>
                         </div>
                     </div>
                 </div>

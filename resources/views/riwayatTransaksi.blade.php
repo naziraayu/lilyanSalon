@@ -32,7 +32,7 @@
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card card-margin">
                 <div class="card-header no-border">
-                    <h5 class="card-title" style="color: #864659">Customer: {{ $transaksis->nama_lengkap }}</h5>
+                    <h5 class="card-title" style="color: #864659">Customer: {{ $transaksis->name }}</h5>
                 </div>
                 <div class="card-body pt-0">
                     <div class="widget-49">
@@ -85,7 +85,7 @@
                                 <div class="col">
                                     <ul class="right" type="none" >
                                         <li class="right">No: {{ $transaksis->id_transaksi }}</li>
-                                        <li class="right">Customer: {{ $transaksis->nama_lengkap }}</li>
+                                        <li class="right">Customer: {{ $transaksis->name }}</li>
                                         <li class="right">Jam: {{ $transaksis->jam }}</li>
                                         <li class="right">Tanggal: {{ $transaksis->tanggal }}</li>
                                         {{-- <li class="right">Status: {{ $transaksis->status }}</li> --}}

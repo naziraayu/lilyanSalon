@@ -23,7 +23,7 @@
                 <img src="{{ $item->image }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
             </div>
             <div class="card-body">
-                <h5 class="card-title font-weight-bold">Customer: {{ $item->nama_lengkap }}</h5>
+                <h5 class="card-title font-weight-bold">Customer: {{ $item->name }}</h5>
                 <p class="mb-2">Nama Treatment: {{ $item->nama_treatment }}</p>
                 <p class="mb-2">Service: {{ $item->service }}</p>
                 <p class="mb-2">Kecamatan: {{ $item->kecamatan }}</p>

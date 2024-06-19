@@ -15,7 +15,7 @@
 {{-- <main id="main"> --}}
 
     <!-- Modal Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Modal Search End -->
 
     <!-- Carousel Start -->
@@ -48,7 +48,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-primary text-uppercase mb-3" style="letter-spacing: 3px;">Hair & Beauty Center</h4>
                             <h1 class="display-1 text-capitalize text-dark mb-3">Hair Treatment</h1>
-                            <p class="mx-md-5 fs-4 px-4 mb-5 text-dark">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>                           
+                            <p class="mx-md-5 fs-4 px-4 mb-5 text-dark">Rambut yang sehat dan indah adalah aset berharga bagi penampilan Anda. Di Lily Ann Salon, menawarkan berbagai jenis perawatan rambut yang dirancang khusus untuk memenuhi kebutuhan Anda.</p>                           
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-primary text-uppercase mb-3" style="letter-spacing: 3px;">Hair & Beauty Center</h4>
                             <h1 class="display-1 text-capitalize text-dark mb-3">Beauty Treatment</h1>
-                            <p class="mx-md-5 fs-4 px-5 mb-5 text-dark">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+                            <p class="mx-md-5 fs-4 px-5 mb-5 text-dark">Di Lily Ann Salon juga menawarkan berbagai perawatan kecantikan untuk merawat kulit dan tubuh Anda. Mulai dari Facial hingga lash lift dengan Teknik terbaik untuk memberikan hasil terbaik bagi Anda.</p>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-primary text-uppercase mb-3" style="letter-spacing: 3px;">Hair & Beauty Center</h4>
                             <h1 class="display-1 text-capitalize text-dark">Mask/Spa Treatment</h1>
-                            <p class="mx-md-5 fs-4 px-5 mb-5 text-dark">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+                            <p class="mx-md-5 fs-4 px-5 mb-5 text-dark">Kami menggunakan produk berkualitas tinggi dan Teknik perawatan terbaik untuk memastikan rambut Anda tetap sehat dan indah, melalui layanan hair spa dan dan hair mask.</p>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                             <div class="col-8">
                                 <div class="services-content text-end">
                                     <h3>Potong</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Merupakan perawatan rambut yang mencakup pemotongan rambut sesuai dengan model yang diinginkan oleh pelanggan.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                             <div class="col-8">
                                 <div class="services-content text-start">
                                     <h3>Creambath</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Creambath bertujuan untuk melembapkan rambut, mengurangi ketombe, dan merilekskan kulit kepala.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                             <div class="col-8">
                                 <div class="services-content text-end">
                                     <h3>Smoothing</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Merupakan perawatan rambut yang bertujuan untuk meratakan dan meluruskan rambut yang keriting atau berombak, memberikan tampilan yang lebih halus dan mudah diatur.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -157,8 +157,8 @@
                             </div>
                             <div class="col-8">
                                 <div class="services-content text-start">
-                                    <h3>Curly</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <h3>Cuci Curly</h3>
+                                    <p>Merupakan perawatan rambut yang mencakup pencucian rambut dan rambut akan diatur kembali dengan teknik curly styling.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                             <div class="col-8">
                                 <div class="services-content text-end">
                                     <h3>Hairmask</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Perawatan rambut dengan menggunakan hair mask khusus untuk rambut panjang. Membantu melembapkan, menguatkan, dan merawat rambut agar tetap sehat dan berkilau.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                             <div class="col-8">
                                 <div class="services-content text-start">
                                     <h3>Message Wajah</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Perawatan untuk wajah yang mencakup teknik pemijatan untuk meredakan ketegangan otot wajah, meningkatkan sirkulasi darah, dan memberikan efek rileks pada kulit wajah.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                             <div class="col-8">
                                 <div class="services-content text-end">
                                     <h3>Facial</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Perawatan wajah dengan menggunakan produk perawatan dari brand Sari Ayu yang terkenal akan kualitasnya. Facial Sari Ayu bertujuan untuk membersihkan, merawat, dan menjaga kelembutan kulit wajah.</p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -230,7 +230,8 @@
                             <div class="col-8">
                                 <div class="services-content text-start">
                                     <h3>Lashlift</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                                    <p>Perawatan untuk melentikkan bulu mata secara alami tanpa perlu menggunakan bulu mata palsu. Memberikan efek mata yang lebih menawan.
+                                    </p>
                                     {{-- <a href="#" class="btn btn-primary btn-primary-outline-0 rounded-pill py-2 px-4">Make Order</a> --}}
                                 </div>
                             </div>
@@ -1186,7 +1187,7 @@
                                 <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                                 <div>
                                     <h4>Email</h4>
-                                    <p class="mb-0">info@example.com</p>
+                                    <p class="mb-0">aylanazefanya@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -1195,7 +1196,7 @@
                                 <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
                                 <div>
                                     <h4>Telephone</h4>
-                                    <p class="mb-0">(+012) 3456 7890 123</p>
+                                    <p class="mb-0">+62 821-3939-1288</p>
                                 </div>
                             </div>
                         </div>

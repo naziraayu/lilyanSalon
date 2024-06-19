@@ -24,12 +24,12 @@
                     <div class="d-flex align-items-center">
                         <div class="flex-1 ms-1 d-flex align-items-center">
                             <i class="bi bi-person-circle me-2 mt-2" style="font-size: 30px; color: #864659"></i>
-                            <h5 class="font-size-15 mt-3">{{ $customers->nama_lengkap }}</h5>
+                            <h5 class="font-size-15 mt-3">{{ $customers->name }}</h5>
                         </div>
                     </div>
                     
                     <div class="mt-3 pt-1">
-                        <p class="text-muted mb-0"><i class="bi bi-telephone font-size-15 align-middle pe-2" style="color: #864659"></i>{{ $customers->no_telp }}</p>
+                        <p class="text-muted mb-0"><i class="bi bi-telephone font-size-15 align-middle pe-2" style="color: #864659"></i>{{ $customers->nomor_hp }}</p>
                         <p class="text-muted mb-0 mt-2"><i class="bi bi-envelope-fill font-size-15 align-middle pe-2" style="color: #864659"></i>{{ $customers->email }}</p>
                         <p class="text-muted mb-0 mt-2"><i class="bi bi-lock-fill font-size-15 align-middle pe-2" style="color: #864659"></i>{{ $customers->password }}</p>
                     </div>

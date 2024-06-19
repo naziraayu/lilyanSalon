@@ -15,11 +15,9 @@ class Customer extends Model
     protected $fillable = [
         // 'id_customer',
         'email',
-        'no_telp',
-        'nama_lengkap',
+        'nomor_hp',
+        'name',
         'password',
-        'pertanyaan_keamanan',
-        'jawaban',
     ];
     protected $hidden = [
         'password',

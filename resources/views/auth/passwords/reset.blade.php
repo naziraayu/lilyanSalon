@@ -89,10 +89,10 @@
                 <div class="col-lg-7">
                     <div class="card1">
                         <div class="row">
-                            <img src="img/logo.png" class="logo">
+                            <img src="{{ asset('img/logo.png') }}" class="logo">
                         </div>
                         <div class="row px-5 justify-content-center border-line">
-                            <img src="img/Beauty salon-rafiki.png" class="image">
+                            <img src="{{ asset('img/forgot.png') }}" class="image">
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ class TransaksiController extends Controller
     }
     public function index($id){
     // Mendapatkan semua data transaksi dengan melakukan join antara tabel booking, menu, dan customer
-    $data = Booking::select('booking.*', 'menu.nama_treatment','menu.harga', 'customer.nama_lengkap')
+    $data = Booking::select('booking.*', 'menu.nama_treatment','menu.harga', 'customer.name')
                 ->join('menu', 'booking.menu_id', '=', 'menu.id')
                 ->join('customer', 'booking.customer_id', '=', 'customer.id')
                 ->where('booking.id', $id) // Menambahkan kondisi where untuk memfilter berdasarkan id
@@ -123,7 +123,7 @@ class TransaksiController extends Controller
     {
         // Ambil data transaksi dari tabel dengan join ke tabel customer
         $transaksi = DB::table('transaksi')
-                        ->select('transaksi.*', 'customer.nama_lengkap', 'menu.nama_treatment', 'menu.harga', 'menu.image', 'booking.tanggal', 'booking.jam', 'booking.akomodasi')
+                        ->select('transaksi.*', 'customer.name', 'menu.nama_treatment', 'menu.harga', 'menu.image', 'booking.tanggal', 'booking.jam', 'booking.akomodasi')
                         ->join('customer', 'transaksi.customer_id', '=', 'customer.id')
                         ->join('menu', 'transaksi.menu_id', '=', 'menu.id')
                         ->join('booking', 'transaksi.booking_id', '=', 'booking.id')

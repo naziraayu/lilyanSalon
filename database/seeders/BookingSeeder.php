@@ -21,8 +21,8 @@ class BookingSeeder extends Seeder
             'alamat' => 'Jln Bengawan Solo',
             'akomodasi' => '20000',
             'status' => 'Belum Bayar',   
-            'customer_id' => '3',
-            'menu_id' => '10',
+            'customer_id' => '4',
+            'menu_id' => '7',
         ]);
     }
 }

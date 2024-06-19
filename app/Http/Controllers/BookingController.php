@@ -12,7 +12,7 @@ class BookingController extends Controller
 
         $data = Booking::leftJoin('customer', 'booking.customer_id', '=', 'customer.id')
                     ->leftJoin('menu', 'booking.menu_id', '=', 'menu.id')
-                    ->select('booking.*', 'customer.nama_lengkap', 'menu.image', 'menu.nama_treatment')
+                    ->select('booking.*', 'customer.name', 'menu.image', 'menu.nama_treatment')
                     ->orderBy('booking.id', 'desc')
                     ->get();
 

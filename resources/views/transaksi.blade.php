@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="nama_lengkap" placeholder="Nama Customer" name="nama_lengkap" value="{{ $item->nama_lengkap }}" >
+                            <input type="text" class="form-control" id="nama_lengkap" placeholder="Nama Customer" name="nama_lengkap" value="{{ $item->name }}" >
                             <label for="nama_lengkap">Nama Customer</label>
                         </div>
                     </div>

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('alamat')->nullable();
             $table->bigInteger('akomodasi');
             $table->string('status');
+            $table->string('nama_treatment');
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('menu_id');
             $table->foreign('menu_id')
